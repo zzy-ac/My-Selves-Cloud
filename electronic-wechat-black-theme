@@ -1,0 +1,36 @@
+/*背景*/
+.box{
+  background:#2a2e32
+}
+/*标题背景*/
+.box_hd .title_wrap{
+    background-color: #2a2e32;
+}
+/*标题文字*/
+.box_hd .title .title_name {
+    color: #fff;
+}
+/*发送按钮*/
+.btn_send {
+    background-color: #7d7d7d;
+}
+.btn {
+    border: 1px solid #545454;
+}
+/*登陆背景*/
+.login_box {
+    background-color: #292c33;
+}
+/*气泡颜色*/
+.bubble.bubble_default{
+  background-color: #acacac;
+}
+.bubble.left:after{
+  border-right-color: #acacac;
+}
+.bubble.bubble_primary{
+  background-color: #29618b;
+}
+.bubble.bubble_primary.right:after{
+  border-left-color: #29618b;
+}
