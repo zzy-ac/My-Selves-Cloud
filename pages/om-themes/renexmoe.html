@@ -184,12 +184,7 @@
 
     <div class="mdui-container">
   <ul class="mdui-menu" id="admin-menu">
-  <li class="mdui-menu-item">
-    <a href="javascript:;" class="mdui-ripple back"
-      ><i class="mdui-menu-item-icon mdui-icon material-icons">arrow_back</i
-      >返回上一页</a
-    >
-  </li>
+
   <!--AdminStart-->
   <li class="mdui-menu-item">
     <a href="javascript:;" class="mdui-ripple refresh"
@@ -304,7 +299,17 @@
       </div>
     </li>
     <!--BackArrowStart-->
-
+    <li class="mdui-list-item mdui-ripple back-page">
+      <div class="mdui-row mdui-col-sm-12">
+        <a href="<!--BackArrowUrl-->">
+          <div class="mdui-col-xs-7">
+            <i class="mdui-icon material-icons">arrow_upward</i>
+          </div>
+          <div class="mdui-col-xs-3 mdui-text-right"></div>
+          <div class="mdui-col-xs-2 mdui-text-right"></div>
+        </a>
+      </div>
+    </li>
     <!--BackArrowEnd-->
     <!--FolderListStart-->
 <li
@@ -396,6 +401,20 @@
 <!--FootomfEnd-->
 
 
+<script>
+  window.MorePage = undefined;
+</script>
+<!--MorePageStart-->
+<script>
+    window.MorePage = [
+    <!--MorePageListNowStart-->
+      <!--PageNum-->,
+    <!--MorePageListNowEnd-->
+    <!--MorePageListStart-->
+        <!--PageNum-->,
+    <!--MorePageListEnd-->
+    ];
+  </script>
 <!--MorePageEnd-->
 
 <!--IsFolderEnd-->
