@@ -183,7 +183,22 @@
 </div>
 
     <div class="mdui-container">
-
+  <ul class="mdui-menu" id="admin-menu">
+  <li class="mdui-menu-item">
+    <a href="javascript:;" class="mdui-ripple back"
+      ><i class="mdui-menu-item-icon mdui-icon material-icons">arrow_back</i
+      >返回上一页</a
+    >
+  </li>
+  <!--AdminStart-->
+  <li class="mdui-menu-item">
+    <a href="javascript:;" class="mdui-ripple refresh"
+      ><i class="mdui-menu-item-icon mdui-icon material-icons">refresh</i
+      >刷新缓存</a
+    >
+  </li>
+  <!--AdminEnd-->
+</ul>
 <i id="mouseplace" style="position: absolute"></i>
 
 <div class="mdui-dialog" id="login_input">
@@ -258,7 +273,117 @@
 </div>
 <!--HeadmdEnd-->
 
+<div class="mdui-row mdui-shadow-3" style="margin: 20px 0; border-radius: 8px">
+  <ul class="mdui-list" id="file-list">
+    <li class="mdui-list-item mdui-ripple">
+      <div class="mdui-row mdui-col-xs-12">
+        <div class="mdui-col-xs-12 mdui-col-sm-7">
+          <!--constStr@File--><i
+            class="mdui-icon material-icons icon-sort"
+            data-sort="name"
+            data-order="downward"
+            >expand_more</i
+          >
+        </div>
+        <div class="mdui-col-sm-3 mdui-text-right">
+          <!--constStr@EditTime--><i
+            class="mdui-icon material-icons icon-sort"
+            data-sort="date"
+            data-order="downward"
+            >expand_more</i
+          >
+        </div>
+        <div class="mdui-col-sm-2 mdui-text-right">
+          <!--constStr@Size--><i
+            class="mdui-icon material-icons icon-sort"
+            data-sort="size"
+            data-order="downward"
+            >expand_more</i
+          >
+        </div>
+      </div>
+    </li>
+    <!--BackArrowStart-->
+    <li class="mdui-list-item mdui-ripple back-page">
+      <div class="mdui-row mdui-col-sm-12">
+        <a href="<!--BackArrowUrl-->">
+          <div class="mdui-col-xs-7">
+            <i class="mdui-icon material-icons">arrow_upward</i>
+          </div>
+          <div class="mdui-col-xs-3 mdui-text-right"></div>
+          <div class="mdui-col-xs-2 mdui-text-right"></div>
+        </a>
+      </div>
+    </li>
+    <!--BackArrowEnd-->
+    <!--FolderListStart-->
+<li
+  class="mdui-list-item mdui-ripple"
+  data-sort
+  data-sort-name="<!--FileEncodeReplaceName-->"
+  data-sort-date="<!--lastModifiedDateTime-->"
+  data-sort-size="<!--size-->"
+  style="padding-right: 36px"
+>
+  <div class="mdui-row mdui-col-sm-12">
+    <a href="<!--FileEncodeReplaceUrl-->/">
+      <div class="mdui-col-xs-12 mdui-col-sm-7 mdui-text-truncate">
+        <i class="mdui-icon material-icons">folder_open</i
+        ><span> <!--FileEncodeReplaceName--></span>
+      </div>
+      <div class="mdui-col-sm-3 mdui-text-right">
+        <!--lastModifiedDateTime-->
+      </div>
+      <div class="mdui-col-sm-2 mdui-text-right">
+        <!--size-->
+      </div>
+    </a>
+  </div>
+</li>
+<!--FolderListEnd-->
+ <!--FileListStart-->
+<li
+  class="mdui-list-item file mdui-ripple"
+  data-sort
+  data-sort-name="<!--FileEncodeReplaceName-->"
+  data-sort-date="<!--lastModifiedDateTime-->"
+  data-sort-size="<!--size-->"
+  data-readypreview="<!--FileExt-->"
+>
+  <div class="mdui-row mdui-col-sm-12">
+    <div class="mdui-col-xs-12 mdui-col-sm-7 mdui-text-truncate">
+      <a
+        class="<!--FileExtType-->"
+        data-name="<!--FileEncodeReplaceName-->"
+        href="<!--FileEncodeReplaceUrl-->?preview"
+        aria-label="File"
+      >
+        <i class="mdui-icon material-icons"> <!--IconValue--></i>
+        <span> <!--FileEncodeReplaceName--></span>
+      </a>
+    </div>
+    <div class="mdui-col-sm-3 mdui-text-right">
+      <!--lastModifiedDateTime-->
+    </div>
+    <div class="mdui-col-sm-2 mdui-text-right">
+      <!--size-->
+    </div>
+  </div>
+  <div class="forcedownload mdui-text-right">
+    <a
+      title="<!--constStr@Download-->"
+      aria-label="Download"
+      href="<!--FileEncodeReplaceUrl-->"
+      target="_blank"
+      ><button class="mdui-btn mdui-ripple mdui-btn-icon">
+        <i class="mdui-icon material-icons">file_download</i>
+      </button></a
+    >
+  </div>
+</li>
+<!--FileListEnd-->
 
+  </ul>
 </div>
 <!--ReadmemdStart-->
 <div class="mdui-chip mdui-ripple mdui-hidden-xs">
