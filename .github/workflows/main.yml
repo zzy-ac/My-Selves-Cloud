@@ -1,7 +1,7 @@
 name: Sync Repo to CODING
 on:
   push:
-  schedule:
+
     # 每天北京时间0点同步
 
 
