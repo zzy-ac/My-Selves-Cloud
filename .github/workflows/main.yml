@@ -18,4 +18,4 @@ jobs:
           # 注意替换为你的 GitHub 源仓库地址
           github-repo: "git@github.com:zzy-ac/My-Selves-Cloud.git"
           # 注意替换为你的 CODING 目标仓库地址
-          coding-repo: "git@e.coding.net:zzy-ac1/import-p2i9/My-Selves-Cloud.git"
+          coding-repo: "git@e.coding.net:zzy-ac1/zzy-ac/My-Selves-Cloud.git"
