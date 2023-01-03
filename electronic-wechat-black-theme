@@ -34,3 +34,15 @@
 .bubble.bubble_primary.right:after{
   border-left-color: #29618b;
 }
+
+/*群人数颜色*/
+.box_hd .title.poi {
+    cursor: pointer;
+    color: white;
+}
+/*群人员背景颜色*/
+.scroll-wrapper>.scroll-content {
+    border: none!important;
+    box-sizing: content-box!important;
+    background-color: #292c33;
+}
