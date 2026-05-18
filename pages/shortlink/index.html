@@ -4,23 +4,26 @@
   <meta http-equiv="content-type" content="txt/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="shortcut icon" href="https://blog.dmnb.cf/images/favicon.png">
-  <link rel="stylesheet" href="https://cdn.dmnb.cf/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous">
   <title>鸣庚短链 - 鸣庚的在线网址缩短服务</title>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4637740832534429"
-     crossorigin="anonymous"></script>
   <style>
     * {
       margin: 0;
       padding: 0;
+      cursor: default;
     }
+    
     html, body, input, text, textarea {
-    outline: none;
-    font-family: 'Arial', 'Microsoft YaHei', '黑体', '宋体', sans-serif;
+      outline: none;
+      font-family: 'Arial', 'Microsoft YaHei', '黑体', '宋体', sans-serif;
     }
+    
     html, body {
-    background: #fff;
-    line-height: 1em;
+      height: 100%;
+      background: #fff;
+      line-height: 1em;
     }
+    
     body {
       display: -webkit-box;
       display: flex;
@@ -31,100 +34,214 @@
       vertical-align: center;
       flex-wrap: wrap;
       align-content: center;
-
+      
       color: #2a2b2c;
       background-color: #ffffff;
       overflow: hidden;
     }
-    .title{
-    margin-top: 100px;
-    line-height: 1em;
-    color: #ff4665;
-    font-size: 42px;
-    text-transform: uppercase;
+    
+    .card {
+      background-color: transparent;
+      width: 768px;
+      border: none;
+      box-shadow: none;
     }
+    
+    .title {
+      line-height: 1em;
+      color: #ff4665;
+      font-size: 42px;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
     .description {
-    margin-bottom: 30px;
-    line-height: 1em;
-    color: #7e7e7e;
-    font-size: 16px;
-    font-weight: normal;
+      line-height: 1em;
+      color: #7e7e7e;
+      font-size: 16px;
+      font-weight: normal;
+      text-align: center;
+      margin-bottom: 30px;
     }
-    .btn.btn-primary{
-    width: 90px;
-    height: 38px;
-    margin: 0 0 0 5px;
-    background: #ff4665;
-    border-radius: 5px;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    transition: .2s opacity ease;
+    
+    .card-header {
+      background-color: #ff4665;
+      color: white;
+      border: none;
+      border-radius: 5px 5px 0 0;
+      text-align: center;
+      font-weight: bold;
     }
-
+    
+    .card-body {
+      background-color: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 0 0 5px 5px;
+      padding: 30px;
+    }
+    
+    .card-text {
+      text-align: center;
+      margin-top: 20px;
+    }
+    
+    .card-text > a {
+      text-decoration: none;
+      color: #ff4665;
+      cursor: pointer;
+    }
+    
+    .btn.btn-primary {
+      width: 90px;
+      height: 38px;
+      background: #ff4665;
+      border-radius: 5px;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: .2s opacity ease;
+    }
+    
+    .btn.btn-primary:hover {
+      opacity: 0.9;
+    }
+    
     .form-control {
+      cursor: auto;
       line-height: 32px;
       padding: 0 10px;
       border: 3px solid #bdc3c7;
       border-radius: 5px;
       color: #333;
+      transition: .2s border ease;
     }
+    
     .form-control.focus,
     .form-control:focus {
       border-color: #ff4665;
-      transition: .2s border ease;
-    } 
+    }
+    
     .footer {
-    width: 100%;
-    bottom: 80px;
-    left: 0;
-    position: absolute;
-    color: #7e7e7e;
+      width: 100%;
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      text-align: center;
+      color: #7e7e7e;
+      font-size: 14px;
     }
+    
     .footer a {
-    color: #ff4665
+      color: #ff4665;
+      text-decoration: none;
     }
+    
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    
+    .modal-header {
+      background-color: #ff4665;
+      color: white;
+    }
+    
+    .modal-header .close {
+      color: white;
+      opacity: 0.8;
+    }
+    
+    .modal-header .close:hover {
+      opacity: 1;
+    }
+    
+    @media (max-width: 769px) {
+      .card {
+        width: 80%;
+      }
+      .title {
+        font-size: 36px;
+      }
+    }
+    
+    @media (max-width: 420px) {
+      .card {
+        width: 95%;
+      }
+      .title {
+        font-size: 28px;
+      }
+      .description {
+        font-size: 14px;
+      }
+    }
+    
+    @media (prefers-color-scheme: dark) { 
+      body {
+        color: #d9d9d9; 
+        background: #1b1b1b;
+      }
+      .card-body {
+        background-color: #252d38;
+        border-color: #3a3a3a;
+      }
+      .form-control {
+        background-color: #2d3748;
+        border-color: #4a5568;
+        color: #e2e8f0;
+      }
+      .footer {
+        color: #a0aec0;
+      }
+    } 
   </style>
 </head>
 <body>
-  <center>
-    <h2 class="title">鸣庚短链</h2>
-</br>
-
-      <h5 class="description">鸣庚的在线网址缩短服务</h5>
-      <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="原网址" id="text">
-        <div class="input-group-append">
-          <button class="btn btn-primary" type="button" onclick='shorturl()' id="searchbtn">生成</button>
+<center>
+  <div class="container">
+    <div class="card">
+      <h5 class="card-header">鸣庚短链</h5>
+      <div class="card-body">
+        <h5 class="card-title">请输入你要缩短的链接 :</h5>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Example: https://example.com/" id="text">
+          <div class="input-group-append">
+            <button class="btn btn-primary" type="button" onclick='shorturl()' id="searchbtn">Shorten it</button>
+          </div>
+        </div>    
+        <div class="card-text">
+          <a href="https://github.com/xyTom/Url-Shorten-Worker/" target="_self">Fork me on GitHub</a>
         </div>
+        <p id="notice"></p>             
       </div>
-      <p id="notice"></p>
-      <div class="footer">
-        Copyright &copy; <a href="https://blog.m-l.cc">鸣庚亭</a> | <a href="https://github.com/xyTom/Url-Shorten-Worker/" title="源码" target="_blank">Github</a>
-      </div>
-
-  </center>
+    </div>
+</center>    
+    <div class="footer">
+      Copyright &copy; <a href="https://blog.m-l.cc">鸣庚亭</a> | <a href="https://github.com/xyTom/Url-Shorten-Worker/" title="源码" target="_blank">Github</a>
+    </div>
+  </div>
+  
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">短网址：</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Result</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body" id="result">无反馈</div>
+        <div class="modal-body" id="result">No result</div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" onclick='copyurl("result")' data-toggle="popover" data-placement="bottom" data-content="Copied!">复制</button>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>    
+          <button type="button" class="btn btn-primary" onclick='copyurl("result")' data-toggle="popover" data-placement="bottom" data-content="Copied!">Copy</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>    
         </div>
       </div>
     </div>
   </div>         
-  <script src="https://cdn.m-l.cc/npm/jquery@3.4.1/dist/jquery.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
-  <script src="https://cdn.m-l.cc/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://cdn.m-l.cc/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.m-l.cc/npm/url-shorten-worker@1.0.5/main.js" crossorigin="anonymous"></script>
+  
+  <script src="https://gcore.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+  <script src="https://gcore.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://gcore.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+  <script src="https://gcore.jsdelivr.net/npm/url-shorten-worker@1.0.7/main.js" crossorigin="anonymous"></script>
 </body>
-
 </html>
